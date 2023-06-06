@@ -1,7 +1,7 @@
 # README
 The following code designed to restart EKS cluster deployment using AWS Lambda. Example usages: your AWS Secrets Manager secret has been rotated and you want to restart deployment, so application could fetch new creds.
 
-To achieve this add the SQS destination to your rotator lambda function, then use this SQS topic as a trigger for restart function.
+To achieve this add the CloudWatch trigger for your Lambda Function
 
 ### Requirements
 Required permissions for Lambda execution role:
@@ -72,4 +72,11 @@ Build Lambda package with `junipiter`:
 
 ```
 juni build
+```
+
+### Terraform
+You can use terraform code to create all that above. Do not forget to provider your own values in `variables.tfvars` file:
+
+```
+terraform apply --var-file variables.tfvars
 ```

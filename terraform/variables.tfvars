@@ -1,0 +1,6 @@
+aws_region            = "us-east-2"
+cluster_name          = "foobar"
+configuration         = "foobar"
+deployments_to_rotate = "foobar0 foobar1 foobar2"
+environment           = "development"
+cluster_name          = "foobarcluster"
