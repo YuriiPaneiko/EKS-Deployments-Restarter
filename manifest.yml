@@ -1,0 +1,6 @@
+functions:
+  reko:
+    requirements: ./src/requirements.txt
+    image: lambci/lambda:build-python3.8
+    include:
+    - ./src/lambda_function.py
